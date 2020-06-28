@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import os #operation system
 
 #讀取檔案
@@ -13,6 +14,17 @@ if os.path.isfile('products.csv'): #檢查檔案在不在
 	print(products)
 else:
 	print('找不到檔案.....')
+=======
+#讀取檔案
+products = []
+with open ('products.csv', 'r') as f:
+	for line in f:
+		if '商品,價格' in line:
+			continue
+		name, price = line.strip().split(',')
+		products.append([name, price])
+print(products)
+>>>>>>> 3e80c2552830cb1101940a2428158ea616d19344
 
 #讓使用者輸入
 while True:
